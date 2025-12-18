@@ -44,6 +44,10 @@ body {
     text-decoration: none;
 }
 
+.svg-item {
+    text-align: center;
+}
+
 h2 { 
     font-size: 14px; 
     font-weight: 600;
