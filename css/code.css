@@ -1,32 +1,40 @@
 :root {
-    --code-bg: #111111;
-    --code-border: #333333;
-    --code-text: #eeeeee;
-    --inline-code-bg: #222222;
-    --inline-code-color: #ff79c6;
+    --code-bg: #0a0a0a; 
+    --code-border: var(--border);
+    --code-text: var(--text);
 }
 
 pre {
     background: var(--code-bg);
     color: var(--code-text);
-    padding: 20px;
-    overflow-x: auto;
     border: 1px solid var(--code-border);
-    font-size: 12px;
-    margin: 25px 0;
+    font-family: var(--font-mono);
+    
+    padding: 20px;
+    margin: 30px 0;
+    overflow-x: auto;
     border-radius: 0;
+    
+    font-size: 13px;
+    line-height: 1.5;
 }
 
 pre code {
-    color: var(--code-text); 
+    color: inherit; 
     font-family: inherit;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
-p code, li code {
-    font-family: inherit;
-    color: var(--inline-code-color);
-    background-color: var(--inline-code-bg);
-    border: 1px solid #333;
+:not(pre) > code {
+    font-family: var(--font-mono);
+    font-size: 0.9em; 
+    
+    color: var(--highlight); 
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    
     padding: 2px 6px;
-    font-size: 12px;
+    white-space: nowrap; 
 }
